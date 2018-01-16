@@ -1,0 +1,30 @@
+<div class="form-group">
+  <button (click)="loadUsers()">Load Users</button>
+</div>
+
+<div class="text-center">
+  <p class="lead" *ngIf="loading">Loading...</p>
+</div>
+
+<div  *ngIf="users" class="container">
+  <div class="row">
+      <table class="table"  border="1">
+          <thead class="thead-inverse">
+            <tr>
+                <th class="text-center">User ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">User Name</th>
+                <th class="text-center">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr  *ngFor="let user of users">
+                <td class="text-center" style="width: 80px;">{{user.id}}</td>
+                <td class="text-center" style="width: 200px;"> {{user.name}}</td>
+                <td class="text-center" style="width: 200px;">{{user.username}}</td>
+                <td class="text-center" style="width: 200px;">{{user.email}}</td>
+            </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
