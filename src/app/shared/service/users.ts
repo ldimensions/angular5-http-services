@@ -5,7 +5,7 @@ import "rxjs/Rx";
 
 @Injectable()
 export class Users {
-    private apiUrl = "https://jsonplaceholder.typicode.com1";
+    private apiUrl = "https://jsonplaceholder.typicode.com";
     constructor(private http: Http,){
     }
 
